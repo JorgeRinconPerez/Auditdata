@@ -24,10 +24,7 @@ def explore(df):
     cardianalidad_variable = df[f"{i}"].nunique()
     n_nulo_variable = df[f"{i}"].isnull().sum() / longitud
     ejemplo_valores_variable = df[f"{i}"].unique().tolist()[:3]
-    if cardianalidad_variable == longitud:
-      nivelgranularidad = cardianalidad_variable / longitud
-    else:
-      nivelgranularidad = cardianalidad_variable / longitud
+    nivelgranularidad = cardianalidad_variable / longitud
 
     x = pd.DataFrame({'Column Name': [nombre_variable],
                       "Type": [tipo_variable],

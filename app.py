@@ -83,4 +83,5 @@ def main():
   df = get_df(file)
   explore(df)
 
-main()
+if __name__ == '__main__':
+    main()

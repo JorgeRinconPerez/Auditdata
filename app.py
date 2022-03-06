@@ -16,7 +16,7 @@ def explore(df):
 
   y = pd.DataFrame(columns=["Column Name", "Type", "Cardinality", "Granularity", 'Percentage of Nulls', "Examples"], dtype=object)
   y["Cardinality"] = pd.to_numeric(y["Cardinality"])
-  y["Percentage of Nulls"] = pd.to_numeric(y["% of Nulls"])
+  y["Percentage of Nulls"] = pd.to_numeric(y["Percentage of Nulls"])
   longitud = len(df)
   for i in df.columns:
     nombre_variable = df[f"{i}"].name

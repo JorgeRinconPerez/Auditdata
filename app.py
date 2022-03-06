@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import openpyxl
 
 def explore(df):
   # DATA
@@ -57,7 +56,7 @@ def get_df(file):
   if extension.upper() == 'CSV':
     df = pd.read_csv(file)
   elif extension.upper() == 'XLSX':
-    df = pd.read_excel(file, engine='openpyxl')
+    df = pd.read_excel(file)
   elif extension.upper() == 'PICKLE':
     df = pd.read_pickle(file)
   return df
